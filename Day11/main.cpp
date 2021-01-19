@@ -12,8 +12,15 @@ int main(){
         grid.readLine(line);
     }
     bool stat = false;
+    int count = 0;
     while(!stat){
-        stat = grid.tick();
+        // if(count == 1){
+        //     break;
+        // }
+        // count++;
+        grid.printGrid();
+        cout << endl;
+        stat = !grid.tick();
     }
 
     cout << grid.countOccupied() << endl;

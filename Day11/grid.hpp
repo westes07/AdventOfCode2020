@@ -3,19 +3,10 @@
 
 using namespace std;
 
-enum type{
+enum Cell{
     occupied,
     empty,
     floor,
-};
-
-class Cell{
-    private:
-        type seatType;
-    public:
-        Cell(char t);
-        type getSeatType();
-        void setType(type t);
 };
 
 class Ferry{
@@ -30,4 +21,6 @@ class Ferry{
         int getIndex(int row, int col);
         int countNeighbors(int row, int col);
         int countOccupied();
+        void printGrid();
+        bool findFirstSeat(int, int, int, int);
 };
